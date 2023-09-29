@@ -1,4 +1,4 @@
-package com.quote;
+package com.quotepaisen;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;

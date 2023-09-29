@@ -15,8 +15,12 @@ const RandomQuoteView = (props: Props) => {
 
   return (
     <ImageBackground source={Images.Bg} style={styles.container}>
-      <Text style={styles.txt}>"{randomQuote?.content}"</Text>
-      <Text style={styles.txtAuthor}>_ {randomQuote?.author} _</Text>
+      {randomQuote && (
+        <>
+          <Text style={styles.txt}>"{randomQuote?.content}"</Text>
+          <Text style={styles.txtAuthor}>_ {randomQuote?.author} _</Text>
+        </>
+      )}
     </ImageBackground>
   )
 }

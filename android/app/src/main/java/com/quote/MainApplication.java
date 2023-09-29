@@ -1,4 +1,4 @@
-package com.quote;
+package com.quotepaisen;
 
 import android.app.Application;
 import com.facebook.react.PackageList;
