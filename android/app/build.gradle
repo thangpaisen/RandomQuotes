@@ -94,9 +94,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.quotepaisen"
+    namespace "com.quotepaisenz"
     defaultConfig {
-        applicationId "com.quotepaisen"
+        applicationId "com.quotepaisenz"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
