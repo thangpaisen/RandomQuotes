@@ -8,4 +8,5 @@ export default {
   colorCDC3C3: '#CDC3C3',
   colorA3A9AC: '#A3A9AC',
   colorD9D9D9: '#D9D9D9',
+  pink: '#FFD2D5',
 }

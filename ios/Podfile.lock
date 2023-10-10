@@ -330,6 +330,8 @@ PODS:
     - React-perflogger (= 0.71.5)
   - RNCAsyncStorage (1.19.3):
     - React-Core
+  - RNCClipboard (1.11.2):
+    - React-Core
   - RNFastImage (8.6.3):
     - React-Core
     - SDWebImage (~> 5.11.1)
@@ -366,6 +368,8 @@ PODS:
   - RNScreens (3.25.0):
     - React-Core
     - React-RCTImage
+  - RNShare (9.4.1):
+    - React-Core
   - RNSVG (13.4.0):
     - React-Core
   - RNVectorIcons (9.2.0):
@@ -414,10 +418,12 @@ DEPENDENCIES:
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-async-storage/async-storage`)"
+  - "RNCClipboard (from `../node_modules/@react-native-clipboard/clipboard`)"
   - RNFastImage (from `../node_modules/react-native-fast-image`)
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
+  - RNShare (from `../node_modules/react-native-share`)
   - RNSVG (from `../node_modules/react-native-svg`)
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
@@ -498,6 +504,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   RNCAsyncStorage:
     :path: "../node_modules/@react-native-async-storage/async-storage"
+  RNCClipboard:
+    :path: "../node_modules/@react-native-clipboard/clipboard"
   RNFastImage:
     :path: "../node_modules/react-native-fast-image"
   RNGestureHandler:
@@ -506,6 +514,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-reanimated"
   RNScreens:
     :path: "../node_modules/react-native-screens"
+  RNShare:
+    :path: "../node_modules/react-native-share"
   RNSVG:
     :path: "../node_modules/react-native-svg"
   RNVectorIcons:
@@ -550,10 +560,12 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: 511f4301d85daf85abface9afb8d2df2d49f87d3
   ReactCommon: fd73a5b921e6e14a1bab3eff481db62f8b08b96a
   RNCAsyncStorage: c913ede1fa163a71cea118ed4670bbaaa4b511bb
+  RNCClipboard: 3f0451a8100393908bea5c5c5b16f96d45f30bfc
   RNFastImage: 5c9c9fed9c076e521b3f509fe79e790418a544e8
   RNGestureHandler: 38aa38413896620338948fbb5c90579a7b1c3fde
   RNReanimated: cc5e3aa479cb9170bcccf8204291a6950a3be128
   RNScreens: 85d3880b52d34db7b8eeebe2f1a0e807c05e69fa
+  RNShare: 32e97adc8d8c97d4a26bcdd3c45516882184f8b6
   RNSVG: 07dbd870b0dcdecc99b3a202fa37c8ca163caec2
   RNVectorIcons: fcc2f6cb32f5735b586e66d14103a74ce6ad61f8
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d

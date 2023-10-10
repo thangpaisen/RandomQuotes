@@ -11,4 +11,5 @@ export default {
   QuoteByAuthorScreen: 'QuoteByAuthorScreen',
   QuoteByTagScreen: 'QuoteByTagScreen',
   TagsDetailScreen: 'TagsDetailScreen',
+  QuoteDetailsScreen: 'QuoteDetailsScreen',
 }

@@ -1,13 +1,13 @@
-import { FlatList, StyleSheet, Text, View } from 'react-native'
+import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
-import { Colors, Fonts } from '@/Constants'
+import { Colors, Fonts, Texts } from '@/Constants'
 import HeaderNormal from '@/Components/HeaderNormal'
 import { useRandomQuote } from '@/Hooks/useRandomQuote'
 import { useListRandomQuote } from '@/Hooks/useListRandomQuote'
 import { SCREEN_WIDTH, randomColor } from '@/Utils/common'
 import { Image } from 'react-native'
 import { Images } from '@/Assets'
-import { useRoute } from '@react-navigation/native'
+import { StackActions, useNavigation, useRoute } from '@react-navigation/native'
 import { useListQuoteByTag } from '@/Hooks/useListQuoteByTag'
 
 type Props = {
@@ -18,11 +18,20 @@ const TagsDetailScreen = (props: Props) => {
   const route = useRoute<any>()
   const data = route.params?.data
   const { data: lsData, isFetching } = useListQuoteByTag(data?.slug)
-
+  const navigation = useNavigation()
   const renderItem = ({ item, index }: any) => {
     return (
-      <View style={styles.viewItem}>
-        <View
+      <TouchableOpacity
+        style={styles.viewItem}
+        onPress={() => {
+          navigation.dispatch(
+            StackActions.push(Texts.QuoteDetailsScreen, {
+              data: item,
+            })
+          )
+        }}
+      >
+        {/* <View
           style={[
             styles.viewStt,
             {
@@ -31,9 +40,11 @@ const TagsDetailScreen = (props: Props) => {
           ]}
         >
           <Text style={styles.txtStt}>{index + 1}</Text>
-        </View>
-        <Text style={styles.txtItem}>{item?.content}</Text>
-      </View>
+        </View> */}
+        <Text style={styles.txtItem} numberOfLines={3}>
+          {item?.content}
+        </Text>
+      </TouchableOpacity>
     )
   }
   return (
@@ -76,13 +87,17 @@ const styles = StyleSheet.create({
   },
   body: {
     flex: 1,
-    backgroundColor: '#FFD2D5',
-    paddingHorizontal: 20,
+    backgroundColor: Colors.pink,
+    paddingHorizontal: 10,
   },
   viewItem: {
     marginBottom: 20,
     flexDirection: 'row',
     alignItems: 'center',
+    backgroundColor: '#fff',
+    padding: 20,
+    paddingHorizontal: 20,
+    borderRadius: 20,
   },
   viewStt: {
     borderWidth: 1,
@@ -101,7 +116,8 @@ const styles = StyleSheet.create({
   },
   txtItem: {
     fontSize: 16,
-    fontFamily: Fonts.ComingSoonRegular,
+    //     fontFamily: Fonts.ComingSoonRegular,
     color: Colors.black,
+    textAlign: 'center',
   },
 })

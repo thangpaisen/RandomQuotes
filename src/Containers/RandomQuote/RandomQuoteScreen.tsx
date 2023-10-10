@@ -1,33 +1,33 @@
-import { FlatList, StyleSheet, Text, View } from 'react-native'
+import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
-import { Colors, Fonts } from '@/Constants'
+import { Colors, Fonts, Texts } from '@/Constants'
 import HeaderNormal from '@/Components/HeaderNormal'
 import { useRandomQuote } from '@/Hooks/useRandomQuote'
 import { useListRandomQuote } from '@/Hooks/useListRandomQuote'
 import { SCREEN_WIDTH, randomColor } from '@/Utils/common'
 import { Image } from 'react-native'
 import { Images } from '@/Assets'
+import { StackActions, useNavigation } from '@react-navigation/native'
 
 type Props = {}
 
 const RandomQuoteScreen = (props: Props) => {
   const { data, isFetching } = useListRandomQuote()
-
+  const navigation = useNavigation()
   const renderItem = ({ item, index }: any) => {
     return (
-      <View style={styles.viewItem}>
-        <View
-          style={[
-            styles.viewStt,
-            {
-              borderColor: randomColor(),
-            },
-          ]}
-        >
-          <Text style={styles.txtStt}>{index + 1}</Text>
-        </View>
+      <TouchableOpacity
+        style={styles.viewItem}
+        onPress={() => {
+          navigation.dispatch(
+            StackActions.push(Texts.QuoteDetailsScreen, {
+              data: item,
+            })
+          )
+        }}
+      >
         <Text style={styles.txtItem}>{item?.content}</Text>
-      </View>
+      </TouchableOpacity>
     )
   }
   return (
@@ -71,12 +71,16 @@ const styles = StyleSheet.create({
   body: {
     flex: 1,
     backgroundColor: '#FFD2D5',
-    paddingHorizontal: 20,
+    paddingHorizontal: 10,
   },
   viewItem: {
     marginBottom: 20,
     flexDirection: 'row',
     alignItems: 'center',
+    backgroundColor: '#fff',
+    padding: 20,
+    paddingHorizontal: 10,
+    borderRadius: 20,
   },
   viewStt: {
     borderWidth: 1,
@@ -95,7 +99,8 @@ const styles = StyleSheet.create({
   },
   txtItem: {
     fontSize: 16,
-    fontFamily: Fonts.ComingSoonRegular,
+    //     fontFamily: Fonts.ComingSoonRegular,
     color: Colors.black,
+    textAlign: 'center',
   },
 })

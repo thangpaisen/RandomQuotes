@@ -11,6 +11,8 @@ import AuthorScreen from '@/Containers/Author/AuthorScreen'
 import TagsScreen from '@/Containers/TagsScreen/TagsScreen'
 import TagsDetailScreen from '@/Containers/TagsDetailScreen/TagsDetailScreen'
 import QuoteByAuthorScreen from '@/Containers/QuoteByAuthor/QuoteByAuthorScreen'
+import QuoteDetail from '@/Containers/QuoteDetail/QuoteDetailsScreen'
+import QuoteDetailsScreen from '@/Containers/QuoteDetail/QuoteDetailsScreen'
 
 const Stack = createStackNavigator()
 
@@ -28,6 +30,7 @@ const ApplicationNavigator = () => {
           <Stack.Screen name={Texts.TagsScreen} component={TagsScreen} />
           <Stack.Screen name={Texts.TagsDetailScreen} component={TagsDetailScreen} />
           <Stack.Screen name={Texts.QuoteByAuthorScreen} component={QuoteByAuthorScreen} />
+          <Stack.Screen name={Texts.QuoteDetailsScreen} component={QuoteDetailsScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaView>
@@ -37,7 +40,7 @@ const ApplicationNavigator = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor:Colors.white
+    backgroundColor: Colors.white,
   },
 })
 
