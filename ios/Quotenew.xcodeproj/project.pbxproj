@@ -37,10 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* QuoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* QuotenewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuotenewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* QuoteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuoteTests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* Quote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* Quotenew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quotenew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Quote/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = Quote/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Quote/Images.xcassets; sourceTree = "<group>"; };
@@ -169,8 +169,8 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* Quote.app */,
-				00E356EE1AD99517003FC87E /* QuoteTests.xctest */,
+				13B07F961A680F5B00A75B9A /* Quotenew.app */,
+				00E356EE1AD99517003FC87E /* QuotenewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -189,9 +189,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* QuoteTests */ = {
+		00E356ED1AD99517003FC87E /* QuotenewTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "QuoteTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "QuotenewTests" */;
 			buildPhases = (
 				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -204,14 +204,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = QuoteTests;
+			name = QuotenewTests;
 			productName = QuoteTests;
-			productReference = 00E356EE1AD99517003FC87E /* QuoteTests.xctest */;
+			productReference = 00E356EE1AD99517003FC87E /* QuotenewTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* Quote */ = {
+		13B07F861A680F5B00A75B9A /* Quotenewnew */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Quote" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Quotenewnew" */;
 			buildPhases = (
 				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -225,9 +225,9 @@
 			);
 			dependencies = (
 			);
-			name = Quote;
+			name = Quotenewnew;
 			productName = Quote;
-			productReference = 13B07F961A680F5B00A75B9A /* Quote.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* Quotenew.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -247,7 +247,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Quote" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Quotenew" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -260,8 +260,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* Quote */,
-				00E356ED1AD99517003FC87E /* QuoteTests */,
+				13B07F861A680F5B00A75B9A /* Quotenewnew */,
+				00E356ED1AD99517003FC87E /* QuotenewTests */,
 			);
 		};
 /* End PBXProject section */
@@ -434,7 +434,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* Quote */;
+			target = 13B07F861A680F5B00A75B9A /* Quotenewnew */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -463,7 +463,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quote.app/Quote";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quotenew.app/Quotenew";
 			};
 			name = Debug;
 		};
@@ -487,7 +487,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quote.app/Quote";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quotenew.app/Quotenew";
 			};
 			name = Release;
 		};
@@ -497,22 +497,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = 8TT8B34UQB;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JWFK8T2D45;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Quote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kenhpr.qoutezz;
-				PRODUCT_NAME = Quote;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kenhpr.quotenewnew;
+				PRODUCT_NAME = Quotenew;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -525,21 +525,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = 8TT8B34UQB;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JWFK8T2D45;
 				INFOPLIST_FILE = Quote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kenhpr.qoutezz;
-				PRODUCT_NAME = Quote;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kenhpr.quotenewnew;
+				PRODUCT_NAME = Quotenew;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -685,7 +685,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "QuoteTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "QuotenewTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -694,7 +694,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Quote" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Quotenewnew" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -703,7 +703,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Quote" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Quotenew" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

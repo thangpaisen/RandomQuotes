@@ -27,11 +27,11 @@ const HeaderNormal = ({ title, containerStyle, titleStyle, showBorderBottom = tr
           goBack()
         }}
       >
-        <Icon name='arrow-back-outline' size={22} color={'#000'} />
+        <Icon name='caret-back-outline' size={22} color={'#000'} />
       </TouchableOpacity>
       <Text style={{ ...styles.text, ...titleStyle }}>{title}</Text>
       <TouchableOpacity disabled={true}>
-        <Icon name='arrow-back-outline' size={22} color={'transparent'} />
+        <Icon name='caret-back-outline' size={22} color={'transparent'} />
       </TouchableOpacity>
     </View>
   )

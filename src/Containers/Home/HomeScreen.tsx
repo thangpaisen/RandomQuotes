@@ -5,6 +5,7 @@ import React from 'react'
 import { Dimensions, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import RandomQuoteView from './Components/RandomQuoteView'
 import { StackActions, useNavigation } from '@react-navigation/native'
+import { SCREEN_WIDTH } from '@/Utils/common'
 const { width } = Dimensions.get('screen')
 
 const data = [
@@ -12,25 +13,79 @@ const data = [
     name: 'Random Quote',
     type: 'RANDOM',
     screen: Texts.RandomQuoteScreen,
-    bgColor: '#F9DED7',
+    bgColor: 'green',
   },
   {
     name: 'Author',
     screen: Texts.AuthorScreen,
-    bgColor: '#E2BEF1',
+    bgColor: 'green',
     type: 'AUTHOR',
   },
   {
     name: 'Tags',
     screen: Texts.TagsScreen,
-    bgColor: '#FBF7D5',
+    bgColor: 'green',
     type: 'TAGS',
+  },
+  {
+    name: 'Age',
+    screen: Texts.TagsScreen,
+    bgColor: 'green',
+    type: 'age',
   },
   {
     name: 'Love',
     screen: Texts.TagsScreen,
-    bgColor: '#F97B83',
+    bgColor: 'green',
     type: 'LOVE',
+  },
+  {
+    name: 'athletics',
+    screen: Texts.TagsScreen,
+    bgColor: 'green',
+    type: 'athletics',
+  },
+  {
+    name: 'Business',
+    screen: Texts.TagsScreen,
+    bgColor: 'green',
+    type: 'business',
+  },
+  {
+    name: 'Friendship',
+    screen: Texts.TagsScreen,
+    bgColor: 'green',
+    type: 'friendship',
+  },
+  {
+    name: 'Family',
+    screen: Texts.TagsScreen,
+    bgColor: 'green',
+    type: 'Family',
+  },
+  {
+    name: 'Faith',
+    screen: Texts.TagsScreen,
+    bgColor: 'green',
+    type: 'Faith',
+  },
+  {
+    name: 'Ethics',
+    screen: Texts.TagsScreen,
+    bgColor: 'green',
+    type: 'Ethics',
+  },
+  {
+    name: 'Education',
+    screen: Texts.TagsScreen,
+    bgColor: 'green',
+    type: 'Education',
+  },
+  {
+    name: 'Generosity',
+    screen: Texts.TagsScreen,
+    bgColor: 'green',
+    type: 'Generosity',
   },
 ]
 
@@ -66,13 +121,21 @@ const HomeScreen = () => {
         navigation.dispatch(
           StackActions.push(Texts.TagsDetailScreen, {
             data: {
-              name: 'Love',
-              slug: 'love',
+              name: data.name,
+              slug: data.type,
             },
           })
         )
         break
       default:
+        navigation.dispatch(
+          StackActions.push(Texts.TagsDetailScreen, {
+            data: {
+              name: data.name,
+              slug: data.type,
+            },
+          })
+        )
         break
     }
   }
@@ -87,9 +150,17 @@ const HomeScreen = () => {
           }}
           showsVerticalScrollIndicator={false}
         >
-          {data?.map((item: any) => (
-            <CardItem data={item} key={item.name} />
-          ))}
+          <View
+            style={{
+              flexWrap: 'wrap',
+              flexDirection: 'row',
+              marginHorizontal: 10,
+            }}
+          >
+            {data?.map((item: any) => (
+              <CardItem data={item} key={item.name} />
+            ))}
+          </View>
         </ScrollView>
       </View>
     </View>
@@ -108,7 +179,8 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.white,
   },
   item: {
-    marginHorizontal: 20,
+    width: (SCREEN_WIDTH - 60) / 2,
+    marginHorizontal: 10,
     height: 115,
     marginVertical: 10,
     justifyContent: 'center',
@@ -124,7 +196,8 @@ const styles = StyleSheet.create({
     elevation: 4,
   },
   txtItem: {
-    fontFamily: Fonts.ComingSoonRegular,
     fontSize: 24,
+    color: '#fff',
+    fontWeight: 'bold',
   },
 })

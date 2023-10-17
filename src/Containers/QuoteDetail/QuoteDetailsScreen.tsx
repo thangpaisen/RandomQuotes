@@ -31,7 +31,7 @@ const QuoteDetailsScreen = (props: Props) => {
 
   const onShare = () => {
     Share.share({
-      message: data?.author,
+      message: data?.content,
       title: data?.content,
     })
   }
@@ -40,7 +40,7 @@ const QuoteDetailsScreen = (props: Props) => {
     <View
       style={{
         flex: 1,
-        backgroundColor: Colors.pink,
+        backgroundColor: 'green',
       }}
     >
       <HeaderNormal
@@ -58,11 +58,11 @@ const QuoteDetailsScreen = (props: Props) => {
       >
         <Text
           style={{
-            fontSize: 24,
+            fontSize: 26,
             padding: 20,
             textAlign: 'center',
             fontWeight: '600',
-            color: Colors.black,
+            color: '#fff',
           }}
         >
           {data?.content}
@@ -71,9 +71,8 @@ const QuoteDetailsScreen = (props: Props) => {
           style={{
             textAlign: 'right',
             paddingHorizontal: 20,
-            color: Colors.black,
+            color: Colors.white,
             fontSize: 16,
-            fontStyle: 'italic',
             fontWeight: '600',
           }}
         >
@@ -89,18 +88,41 @@ const QuoteDetailsScreen = (props: Props) => {
         <TouchableOpacity
           onPress={onCopy}
           style={{
-            paddingHorizontal: 10,
+            padding: 10,
+            backgroundColor: '#fff',
+            borderRadius: 20,
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
-          <Icon name='copy-outline' size={24} color={'#000'} />
+          <Text
+            style={{
+              fontWeight: '600',
+              color: '#000',
+            }}
+          >
+            Copy
+          </Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={onShare}
           style={{
-            paddingHorizontal: 10,
+            padding: 10,
+            backgroundColor: '#fff',
+            borderRadius: 20,
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginLeft: 10,
           }}
         >
-          <Icon name='share-outline' size={24} color={'#000'} />
+          <Text
+            style={{
+              fontWeight: '600',
+              color: '#000',
+            }}
+          >
+            share
+          </Text>
         </TouchableOpacity>
       </View>
     </View>

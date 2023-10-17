@@ -65,17 +65,17 @@ const styles = StyleSheet.create({
   },
   body: {
     flex: 1,
-    backgroundColor: '#FFD2D5',
+    backgroundColor: 'green',
     paddingHorizontal: 10,
   },
   viewItem: {
     width: (SCREEN_WIDTH - 40) / 3,
     marginHorizontal: 5,
     marginBottom: 10,
-    borderRadius: 5,
+    borderRadius: 40,
     padding: 4,
     paddingVertical: 10,
-    backgroundColor: '#E2BEF1',
+    backgroundColor: '#fff',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
   txtAuthor: {
     textAlign: 'center',
     fontSize: 16,
-    color: '#000',
-    fontFamily: Fonts.ComingSoonRegular,
+    fontWeight: 'bold',
+    color: '#666',
   },
 })

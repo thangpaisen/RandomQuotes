@@ -35,18 +35,17 @@ const QuoteByAuthorScreen = (props: Props) => {
           )
         }}
       >
-        {/* <View
-          style={[
-            styles.viewStt,
-            {
-              borderColor: randomColor(),
-            },
-          ]}
-        >
-          <Text style={styles.txtStt}>{index + 1}</Text>
-        </View> */}
         <Text style={styles.txtItem} numberOfLines={3}>
           {item?.content}
+        </Text>
+        <Text
+          style={{
+            marginTop: 10,
+            color: '#333',
+            alignSelf: 'flex-end',
+          }}
+        >
+          _{item?.author}_
         </Text>
       </TouchableOpacity>
     )
@@ -56,19 +55,6 @@ const QuoteByAuthorScreen = (props: Props) => {
       <HeaderNormal title={'Author ' + data?.name} />
       <View style={styles.body}>
         <FlatList
-          ListHeaderComponent={() => {
-            return (
-              <Image
-                source={Images.Bg_Detail}
-                style={{
-                  marginTop: -80,
-                  width: SCREEN_WIDTH - 40,
-                  height: 200,
-                  resizeMode: 'contain',
-                }}
-              />
-            )
-          }}
           contentContainerStyle={{
             paddingTop: 20,
           }}
@@ -91,12 +77,11 @@ const styles = StyleSheet.create({
   },
   body: {
     flex: 1,
-    backgroundColor: '#FFD2D5',
+    backgroundColor: 'green',
     paddingHorizontal: 10,
   },
   viewItem: {
     marginBottom: 20,
-    flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#fff',
     padding: 20,
@@ -120,8 +105,8 @@ const styles = StyleSheet.create({
   },
   txtItem: {
     fontSize: 16,
-    //     fontFamily: Fonts.ComingSoonRegular,
     color: Colors.black,
     textAlign: 'center',
+    fontWeight: 'bold',
   },
 })

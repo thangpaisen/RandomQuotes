@@ -37,7 +37,6 @@ const styles = StyleSheet.create({
   txt: {
     color: Colors.white,
     fontSize: 18,
-    fontStyle: 'italic',
     fontWeight: 'bold',
     textAlign: 'center',
     textShadowColor: 'rgba(0, 0, 0, 0.75)',
@@ -48,6 +47,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: 'right',
     fontWeight: 'bold',
-    color: Colors.white,
+    color: '#fff',
   },
 })

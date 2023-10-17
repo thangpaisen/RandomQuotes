@@ -27,6 +27,15 @@ const RandomQuoteScreen = (props: Props) => {
         }}
       >
         <Text style={styles.txtItem}>{item?.content}</Text>
+        <Text
+          style={{
+            marginTop: 10,
+            alignSelf: 'flex-end',
+            textAlign: 'right',
+          }}
+        >
+          _{item?.author}_
+        </Text>
       </TouchableOpacity>
     )
   }
@@ -35,19 +44,6 @@ const RandomQuoteScreen = (props: Props) => {
       <HeaderNormal title='Random Quote' />
       <View style={styles.body}>
         <FlatList
-          ListHeaderComponent={() => {
-            return (
-              <Image
-                source={Images.Bg_Detail}
-                style={{
-                  marginTop: -80,
-                  width: SCREEN_WIDTH - 40,
-                  height: 200,
-                  resizeMode: 'contain',
-                }}
-              />
-            )
-          }}
           contentContainerStyle={{
             paddingTop: 20,
           }}
@@ -70,17 +66,16 @@ const styles = StyleSheet.create({
   },
   body: {
     flex: 1,
-    backgroundColor: '#FFD2D5',
+    backgroundColor: 'green',
     paddingHorizontal: 10,
   },
   viewItem: {
     marginBottom: 20,
-    flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#fff',
     padding: 20,
     paddingHorizontal: 10,
-    borderRadius: 20,
+    borderRadius: 10,
   },
   viewStt: {
     borderWidth: 1,
@@ -98,9 +93,10 @@ const styles = StyleSheet.create({
     color: Colors.black,
   },
   txtItem: {
+    flex: 1,
     fontSize: 16,
-    //     fontFamily: Fonts.ComingSoonRegular,
     color: Colors.black,
     textAlign: 'center',
+    fontWeight: 'bold',
   },
 })
