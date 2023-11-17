@@ -3,6 +3,7 @@ import { HomeScreen, LoginScreen, SplashScreen } from '@/Navigators/Stack'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import React from 'react'
+
 import { SafeAreaView, StatusBar, StyleSheet } from 'react-native'
 import MainBottomTab from './MainBottomTab'
 import { navigationRef } from './utils'
