@@ -2,6 +2,7 @@ import React from 'react'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
 import { PlaceholderScreen } from '@/Containers/PlaceholderScreen'
 import { AuthorList } from './AuthorList'
+import { TagsList } from './TagsList'
 
 const Tab = createMaterialTopTabNavigator()
 
@@ -22,7 +23,7 @@ export const MyTabs = () => {
       }}
     >
       <Tab.Screen name='Authors' component={AuthorList} options={{}} />
-      <Tab.Screen name='Tags' component={PlaceholderScreen} />
+      <Tab.Screen name='Tags' component={TagsList} />
     </Tab.Navigator>
   )
 }
