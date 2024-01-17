@@ -10,7 +10,15 @@ const useSearchScreen = () => {
 export const SearchScreen = () => {
   const { onChangedSearchText } = useSearchScreen()
   return (
-    <View style={{ paddingLeft: 12, paddingRight: 12 }}>
+    <View
+      style={{
+        flex: 1,
+        backgroundColor: '#EFF4FF',
+        paddingTop: 75,
+        paddingLeft: 16,
+        paddingRight: 16,
+      }}
+    >
       {/* Page heading */}
       <View
         style={{
@@ -24,6 +32,8 @@ export const SearchScreen = () => {
           variant='headlineLarge'
           style={{
             fontWeight: 'bold',
+            letterSpacing: 1,
+            color: 'slategray',
           }}
         >
           Search
@@ -35,7 +45,7 @@ export const SearchScreen = () => {
       {/* Search input */}
       <View
         style={{
-          padding: 32,
+          padding: 24,
         }}
       >
         <TextInput
