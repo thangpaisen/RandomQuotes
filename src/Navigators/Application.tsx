@@ -1,5 +1,5 @@
 import { Colors, Texts } from '@/Constants'
-import { HomeScreen, LoginScreen, SplashScreen } from '@/Navigators/Stack'
+import { HomeScreen } from '@/Navigators/Stack'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import React from 'react'
@@ -20,9 +20,6 @@ const ApplicationNavigator = () => {
     <NavigationContainer ref={navigationRef}>
       <MainBottomNavigation />
       {/* <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName={Texts.HomeScreen}>
-        <Stack.Screen name={Texts.Splash} component={SplashScreen} />
-        <Stack.Screen name={Texts.HomeScreen} component={HomeScreen} />
-        <Stack.Screen name={Texts.Login} component={LoginScreen} />
         <Stack.Screen name={Texts.RandomQuoteScreen} component={RandomQuoteScreen} />
         <Stack.Screen name={Texts.AuthorScreen} component={AuthorScreen} />
         <Stack.Screen name={Texts.TagsScreen} component={TagsScreen} />

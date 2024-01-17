@@ -1,12 +1,10 @@
 import React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { View } from 'react-native'
 import { Text, Icon } from 'react-native-paper'
-import { useNavigation } from '@react-navigation/native'
 import { useRandomQuote } from '@/Hooks/useRandomQuote'
 import { useRefetchOnFocus } from '@/Hooks/useRefetchOnFocus'
 
 export const HomeScreen = () => {
-  const navigation = useNavigation<any>()
   const { data: randomQuote, refetch } = useRandomQuote()
   useRefetchOnFocus(refetch)
 

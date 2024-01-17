@@ -4,6 +4,7 @@ import { HomeScreen } from '@/Containers/Home/HomeScreen'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { PlaceholderScreen } from '@/Containers/PlaceholderScreen'
 import { SearchScreen } from '@/Containers/Search/SearchScreen'
+import { BookmarkScreen } from '@/Containers/Bookmark/BookmarkScreen'
 
 const Tab = createBottomTabNavigator()
 
@@ -34,12 +35,13 @@ export const MainBottomNavigation = () => {
         }}
       />
       <Tab.Screen
-        name='Chats'
-        component={PlaceholderScreen}
+        name='Bookmark'
+        component={BookmarkScreen}
         options={{
           tabBarIcon: ({ color, size }) => (
             <Ionicons name='heart-outline' color={color} size={size} />
           ),
+          headerShown: false,
         }}
       />
       <Tab.Screen
