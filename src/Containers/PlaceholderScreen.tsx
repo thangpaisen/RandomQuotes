@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text } from 'react-native-ui-lib'
+import { Text } from 'react-native-paper'
 
 export const PlaceholderScreen = () => {
   return (

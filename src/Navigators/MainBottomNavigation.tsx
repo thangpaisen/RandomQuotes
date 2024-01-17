@@ -3,6 +3,7 @@ import { Ionicons } from '@expo/vector-icons'
 import HomeScreen from '@/Containers/Home/HomeScreen'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { PlaceholderScreen } from '@/Containers/PlaceholderScreen'
+import { SearchScreen } from '@/Containers/Search/SearchScreen'
 
 const Tab = createBottomTabNavigator()
 
@@ -26,9 +27,10 @@ export const MainBottomNavigation = () => {
       />
       <Tab.Screen
         name='Search'
-        component={PlaceholderScreen}
+        component={SearchScreen}
         options={{
           tabBarIcon: ({ color, size }) => <Ionicons name='search' color={color} size={size} />,
+          headerShown: false,
         }}
       />
       <Tab.Screen
