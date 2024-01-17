@@ -1,14 +1,11 @@
+import React from 'react'
 import HeaderNormal from '@/Components/HeaderNormal'
 import LoadingView from '@/Components/LoadingView'
 import { Colors, Fonts, Texts } from '@/Constants'
-import { useListAuthors } from '@/Hooks/useListAuthors'
-import { useListRandomQuote } from '@/Hooks/useListRandomQuote'
 import { useListTags } from '@/Hooks/useListTags'
-import { SCREEN_WIDTH, randomColor } from '@/Utils/common'
+import { SCREEN_WIDTH } from '@/Utils/common'
 import { StackActions, useNavigation } from '@react-navigation/native'
-import React from 'react'
-import { TouchableOpacity } from 'react-native'
-import { FlatList, StyleSheet, Text, View } from 'react-native'
+import { FlatList, StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 
 type Props = {}
 
