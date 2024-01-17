@@ -1,127 +1,74 @@
-import { Colors, Fonts, Texts } from '@/Constants'
 import React from 'react'
-import { Dimensions, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import RandomQuoteView from './Components/RandomQuoteView'
-import { StackActions, useNavigation } from '@react-navigation/native'
+import { StyleSheet, View } from 'react-native'
+import { Text, Icon } from 'react-native-paper'
+import { useNavigation } from '@react-navigation/native'
+import { useRandomQuote } from '@/Hooks/useRandomQuote'
+import { useRefetchOnFocus } from '@/Hooks/useRefetchOnFocus'
 
-const data = [
-  {
-    name: 'Random Quote',
-    type: 'RANDOM',
-    screen: Texts.RandomQuoteScreen,
-    bgColor: '#F9DED7',
-  },
-  {
-    name: 'Author',
-    screen: Texts.AuthorScreen,
-    bgColor: '#E2BEF1',
-    type: 'AUTHOR',
-  },
-  {
-    name: 'Tags',
-    screen: Texts.TagsScreen,
-    bgColor: '#FBF7D5',
-    type: 'TAGS',
-  },
-  {
-    name: 'Love',
-    screen: Texts.TagsScreen,
-    bgColor: '#F97B83',
-    type: 'LOVE',
-  },
-]
-
-const HomeScreen = () => {
+export const HomeScreen = () => {
   const navigation = useNavigation<any>()
-
-  const CardItem = ({ data }: any) => {
-    return (
-      <TouchableOpacity
-        onPress={() => {
-          onPress(data)
-        }}
-        style={[
-          styles.item,
-          {
-            backgroundColor: data.bgColor,
-          },
-        ]}
-      >
-        <Text style={styles.txtItem}>{data.name}</Text>
-      </TouchableOpacity>
-    )
-  }
-
-  const onPress = (data: any) => {
-    switch (data.type) {
-      case 'RANDOM':
-      case 'AUTHOR':
-      case 'TAGS':
-        navigation.navigate(data?.screen)
-        break
-      case 'LOVE':
-        navigation.dispatch(
-          StackActions.push(Texts.TagsDetailScreen, {
-            data: {
-              name: 'Love',
-              slug: 'love',
-            },
-          })
-        )
-        break
-      default:
-        break
-    }
-  }
+  const { data: randomQuote, refetch } = useRandomQuote()
+  useRefetchOnFocus(refetch)
 
   return (
-    <View style={{ flex: 1, backgroundColor: Colors.white, paddingTop: 50 }}>
-      <RandomQuoteView />
-      <View style={styles.body}>
-        <ScrollView
+    <View
+      style={{
+        height: '100%',
+        backgroundColor: 'black',
+        paddingTop: 50,
+        paddingLeft: 15,
+        paddingRight: 15,
+        paddingBottom: 50,
+      }}
+    >
+      <View
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}
+      >
+        <Icon source={'format-quote-open'} size={48} color='white'></Icon>
+        <View
           style={{
-            flex: 1,
+            flexDirection: 'row',
+            gap: 12,
           }}
-          showsVerticalScrollIndicator={false}
         >
-          {data?.map((item: any) => (
-            <CardItem data={item} key={item.name} />
-          ))}
-        </ScrollView>
+          <Icon source={'bookmark-outline'} size={24} color='grey'></Icon>
+          <Icon source={'share-outline'} size={24} color='grey'></Icon>
+        </View>
+      </View>
+      <View
+        style={{
+          paddingTop: 100,
+          gap: 32,
+          height: '100%',
+          justifyContent: 'flex-start',
+        }}
+      >
+        <Text
+          variant='headlineLarge'
+          style={{
+            textTransform: 'lowercase',
+            color: 'white',
+            letterSpacing: 1,
+            lineHeight: 40,
+          }}
+        >
+          {randomQuote?.content}
+        </Text>
+
+        <Text
+          variant='titleLarge'
+          style={{
+            textTransform: 'lowercase',
+            color: 'grey',
+          }}
+        >
+          {randomQuote?.author}
+        </Text>
       </View>
     </View>
   )
 }
-
-export default HomeScreen
-
-const styles = StyleSheet.create({
-  body: {
-    flex: 1,
-    marginTop: -30,
-    paddingVertical: 10,
-    borderTopLeftRadius: 35,
-    borderTopRightRadius: 35,
-    backgroundColor: Colors.white,
-  },
-  item: {
-    marginHorizontal: 20,
-    height: 115,
-    marginVertical: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 16,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 4,
-  },
-  txtItem: {
-    fontFamily: Fonts.ComingSoonRegular,
-    fontSize: 24,
-  },
-})

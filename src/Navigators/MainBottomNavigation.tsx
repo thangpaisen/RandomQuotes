@@ -1,6 +1,6 @@
 import React from 'react'
 import { Ionicons } from '@expo/vector-icons'
-import HomeScreen from '@/Containers/Home/HomeScreen'
+import { HomeScreen } from '@/Containers/Home/HomeScreen'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { PlaceholderScreen } from '@/Containers/PlaceholderScreen'
 import { SearchScreen } from '@/Containers/Search/SearchScreen'
