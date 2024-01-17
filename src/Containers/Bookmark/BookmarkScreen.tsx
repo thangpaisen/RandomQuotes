@@ -71,8 +71,7 @@ export const BookmarkScreen = () => {
                   textTransform: 'lowercase',
                 }}
               >
-                Whether you're going through hard times, need an extra push to get stuff done, or
-                like sharing inspirational quotes in social media, this app has you covered.
+                To succeed in your mission, you must have single-minded devotion to your goal.
               </Text>
 
               <Text
