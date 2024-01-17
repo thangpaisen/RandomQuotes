@@ -11,6 +11,7 @@ import TagsScreen from '@/Containers/TagsScreen/TagsScreen'
 import TagsDetailScreen from '@/Containers/TagsDetailScreen/TagsDetailScreen'
 import QuoteByAuthorScreen from '@/Containers/QuoteByAuthor/QuoteByAuthorScreen'
 import QuoteDetailsScreen from '@/Containers/QuoteDetail/QuoteDetailsScreen'
+import { MainBottomNavigation } from './MainBottomNavigation'
 
 const Stack = createStackNavigator()
 
@@ -19,6 +20,7 @@ const ApplicationNavigator = () => {
     <SafeAreaView style={styles.container}>
       <NavigationContainer ref={navigationRef}>
         <StatusBar barStyle={'dark-content'} backgroundColor={Colors.white} />
+        {/* <MainBottomNavigation /> */}
         <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName={Texts.HomeScreen}>
           <Stack.Screen name={Texts.Splash} component={SplashScreen} />
           <Stack.Screen name={Texts.HomeScreen} component={HomeScreen} />
