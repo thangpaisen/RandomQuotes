@@ -37,7 +37,8 @@
     "redux": "^4.2.1",
     "redux-axios-middleware": "^4.0.1",
     "redux-persist": "^6.0.0",
-    "redux-thunk": "^2.4.2"
+    "redux-thunk": "^2.4.2",
+    "expo": "^48.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
