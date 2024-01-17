@@ -2,7 +2,7 @@ import LoadingView from '@/Components/LoadingView'
 import { useListAuthors } from '@/Hooks/useListAuthors'
 import React, { useCallback } from 'react'
 import { ScrollView, View } from 'react-native'
-import { Avatar, List } from 'react-native-paper'
+import { Avatar, List, Text } from 'react-native-paper'
 
 export const AuthorList = () => {
   const { data: authors, isFetching } = useListAuthors()
@@ -27,7 +27,7 @@ export const AuthorList = () => {
         <ScrollView showsVerticalScrollIndicator={false}>
           <View style={{}}>
             {authors.map((author: any, index: any) => (
-              <List.Item
+              <List.Accordion
                 key={index}
                 title={author.name}
                 description={author.description}
@@ -37,7 +37,6 @@ export const AuthorList = () => {
                 descriptionStyle={{
                   fontWeight: '300',
                 }}
-                contentStyle={{ gap: 4 }}
                 left={(props) => (
                   <Avatar.Image
                     {...props}
@@ -45,22 +44,31 @@ export const AuthorList = () => {
                     source={{ uri: getProfileImageURL(author.slug) }}
                   />
                 )}
-                right={(props) => <List.Icon {...props} color='red' icon='heart-outline' />}
-              />
+                // right={(props) => <List.Icon {...props} color='red' icon='heart-outline' />}
+              >
+                <Text
+                  style={{
+                    paddingTop: 16,
+                    paddingBottom: 16,
+                  }}
+                >
+                  {author.bio}
+                </Text>
+                <Text
+                  variant='titleSmall'
+                  style={{
+                    fontWeight: 'bold',
+                    color: 'grey',
+                    paddingBottom: 16,
+                  }}
+                >
+                  Quote Count {author.quoteCount}
+                </Text>
+              </List.Accordion>
             ))}
           </View>
         </ScrollView>
       )}
     </View>
-
-    // <View
-    //   style={{
-    //     paddingTop: 16,
-    //     flex: 1,
-    //     backgroundColor: 'white',
-    //   }}
-    // >
-
-    // </View>
   )
 }
