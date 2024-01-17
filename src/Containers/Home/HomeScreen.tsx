@@ -75,7 +75,7 @@ const HomeScreen = () => {
   }
 
   return (
-    <View style={{ flex: 1, backgroundColor: Colors.white }}>
+    <View style={{ flex: 1, backgroundColor: Colors.white, paddingTop: 50 }}>
       <RandomQuoteView />
       <View style={styles.body}>
         <ScrollView
