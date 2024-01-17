@@ -6,7 +6,6 @@ import Toast from 'react-native-toast-message'
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
 import { QueryClient, QueryClientProvider } from 'react-query'
-import { Text } from 'react-native'
 
 export const queryClient = new QueryClient({
   defaultOptions: {

@@ -4,7 +4,6 @@ export default {
   DetailScreen: 'DetailScreen',
   HomeScreen: 'HomeScreen',
   ProfileScreen: 'ProfileScreen',
-  MainBottomTab: 'MainBottomTab',
   AuthorScreen: 'AuthorScreen',
   TagsScreen: 'TagsScreen',
   RandomQuoteScreen: 'RandomQuoteScreen',
