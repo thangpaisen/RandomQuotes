@@ -1,11 +1,8 @@
 import { Colors, Fonts, Texts } from '@/Constants'
-import { useListAuthors } from '@/Hooks/useListAuthors'
-import { useRandomQuote } from '@/Hooks/useRandomQuote'
 import React from 'react'
 import { Dimensions, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import RandomQuoteView from './Components/RandomQuoteView'
 import { StackActions, useNavigation } from '@react-navigation/native'
-const { width } = Dimensions.get('screen')
 
 const data = [
   {

@@ -6,7 +6,6 @@ import { Colors } from '@/Constants'
 import Icon from 'react-native-vector-icons/Ionicons'
 import * as Clipboard from 'expo-clipboard'
 import Toast from 'react-native-toast-message'
-// import Share from 'react-native-share'
 
 type Props = {
   data: any
